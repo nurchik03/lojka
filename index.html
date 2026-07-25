@@ -1,336 +1,569 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ложка Вкуса & Tri Limona</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="description" content="NURSERVICE — профессиональные электромонтажные работы и продажа качественных электротоваров в Бишкеке. Кабели, розетки, щиты, освещение, услуги электрика.">
+  <title>NURSERVICE — Электромонтажные работы и продажа электротоваров | Бишкек</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header class="header" id="header">
-        <div class="container header__container">
-           <div class="header__logo">
-    <img src="logo.png" alt="Ложка Вкуса & Tri Limona" class="logo-img">
-    <span class="logo-text">Ложка Вкуса & Tri Limona</span>
-</div>
-            <div class="header__right">
-                <a href="#" class="nav-link cart-link" id="cartToggle">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
-                        <line x1="3" y1="6" x2="21" y2="6"/>
-                        <path d="M16 10a4 4 0 01-8 0"/>
-                    </svg>
-                    <span class="cart-count" id="cartCount">0</span>
-                </a>
-                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Меню">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-            <nav class="header__nav" id="mainNav">
-                <ul class="nav-list">
-                    <li><a href="#catalog" class="nav-link">Каталог</a></li>
-                    <li><a href="#about" class="nav-link">О нас</a></li>
-                    <li><a href="#contacts" class="nav-link">Контакты</a></li>
-                </ul>
-            </nav>
+
+  <!-- ==================== ШАПКА САЙТА ==================== -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <a href="#" class="logo" aria-label="NURSERVICE - на главную">
+        <span class="logo-icon"><i class="fas fa-bolt"></i></span>
+        <span class="logo-text">NUR<span class="logo-highlight">SERVICE</span></span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Основное меню">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Главная</a></li>
+          <li><a href="#catalog" class="nav-link">Каталог</a></li>
+          <li><a href="#categories" class="nav-link">Категории</a></li>
+          <li><a href="#advantages" class="nav-link">Преимущества</a></li>
+          <li><a href="#about" class="nav-link">О нас</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contacts" class="nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search-box" id="searchBox">
+          <input type="text" id="searchInput" class="search-input" placeholder="Поиск товаров..." autocomplete="off">
+          <button class="search-btn" aria-label="Поиск"><i class="fas fa-search"></i></button>
         </div>
-    </header>
+        <button class="cart-btn" id="cartBtn" aria-label="Открыть корзину">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="burger-btn" id="burgerBtn" aria-label="Меню" aria-expanded="false">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
 
-    <main>
-        <!-- Баннер -->
-        <section class="banner">
-            <div class="banner__bg"></div>
-            <div class="container banner__container">
-                <div class="banner__content">
-                    <div class="banner__badge">✦ Свежая выпечка каждый день</div>
-                    <h1 class="banner__title">Домашние полуфабрикаты и&nbsp;торты с&nbsp;любовью</h1>
-                    <p class="banner__subtitle">Натуральные продукты, приготовленные с душой. Доставка по городу.</p>
-                    <div class="banner__actions">
-                        <a href="#catalog" class="btn btn-primary btn-large">Перейти в каталог</a>
-                        <a href="#about" class="btn btn-outline">Узнать больше</a>
-                    </div>
-                </div>
-                <div class="banner__image">
-                    <div class="floating-card">🥟</div>
-                    <div class="floating-card">🍰</div>
-                    <div class="floating-card">🧁</div>
-                </div>
+  <main>
+    <!-- ==================== ГЛАВНЫЙ ЭКРАН (HERO) ==================== -->
+    <section id="home" class="hero-section">
+      <div class="hero-bg-particles">
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+        <div class="particle particle-5"></div>
+        <div class="particle particle-6"></div>
+      </div>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fas fa-star"></i> ТОП-электрики 2025
+          </div>
+          <h1 class="hero-title">NURSERVICE</h1>
+          <p class="hero-subtitle">Профессиональные электромонтажные работы и продажа качественных электротоваров</p>
+          <p class="hero-description">Более 3 лет на рынке Кыргызстана. Выполняем электромонтаж любой сложности: от замены розетки до полной электрификации зданий. Гарантия на все виды работ до 5 лет.</p>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="stat-number">1250+</span>
+              <span class="stat-label">Выполненных проектов</span>
             </div>
-        </section>
-
-        <!-- Категории + поиск -->
-        <section class="catalog-controls" id="catalog">
-            <div class="container">
-                <div class="controls__top">
-                    <div class="category-tabs">
-                        <button class="category-btn active" data-category="all">Все товары</button>
-                        <button class="category-btn" data-category="polufabrikaty">🥟 Полуфабрикаты</button>
-                        <button class="category-btn" data-category="torty">🎂 Торты</button>
-                    </div>
-                    <div class="search-box">
-                        <input type="text" id="searchInput" placeholder="Поиск товаров..." aria-label="Поиск товаров">
-                        <button id="searchBtn" aria-label="Найти">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="11" cy="11" r="8"/>
-                                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
+            <div class="hero-stat">
+              <span class="stat-number">850+</span>
+              <span class="stat-label">Довольных клиентов</span>
             </div>
-        </section>
-
-        <!-- Каталог товаров -->
-        <section class="catalog-grid container" id="productGrid">
-            <!-- карточки генерируются JS -->
-        </section>
-
-        <!-- Преимущества -->
-        <section class="benefits">
-            <div class="container">
-                <h2 class="section-title">Почему выбирают нас</h2>
-                <div class="benefits__grid">
-                    <div class="benefit-item">
-                        <div class="benefit-icon">🌿</div>
-                        <h3>Натуральные продукты</h3>
-                        <p>Только отборные ингредиенты без консервантов</p>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon">🧑‍🍳</div>
-                        <h3>Домашнее приготовление</h3>
-                        <p>Готовим с душой, как для своей семьи</p>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon">🚚</div>
-                        <h3>Быстрая доставка</h3>
-                        <p>Свежие продукты в день заказа</p>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon">❤️</div>
-                        <h3>Любовь к деталям</h3>
-                        <p>Каждый рецепт проверен временем</p>
-                    </div>
-                </div>
+            <div class="hero-stat">
+              <span class="stat-number">10</span>
+              <span class="stat-label">Лет опыта</span>
             </div>
-        </section>
+          </div>
+          <div class="hero-buttons">
+            <a href="#catalog" class="btn btn-primary btn-lg hero-btn">
+              <i class="fas fa-list"></i> Перейти в каталог
+            </a>
+            <a href="#contacts" class="btn btn-outline btn-lg">
+              <i class="fas fa-phone"></i> Связаться с нами
+            </a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="hero-image-glow"></div>
+          <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg" class="hero-svg">
+            <rect x="120" y="80" width="260" height="280" rx="12" fill="#2d3436" stroke="#636e72" stroke-width="3"/>
+            <rect x="135" y="95" width="230" height="250" rx="6" fill="#dfe6e9"/>
+            <rect x="150" y="110" width="90" height="40" rx="4" fill="#ff7f00"/>
+            <rect x="150" y="160" width="90" height="40" rx="4" fill="#ff7f00" opacity="0.8"/>
+            <rect x="150" y="210" width="90" height="40" rx="4" fill="#ff7f00" opacity="0.6"/>
+            <rect x="260" y="110" width="90" height="40" rx="4" fill="#00b894"/>
+            <rect x="260" y="160" width="90" height="40" rx="4" fill="#00b894" opacity="0.8"/>
+            <rect x="260" y="210" width="90" height="40" rx="4" fill="#0984e3"/>
+            <circle cx="175" cy="130" r="5" fill="#2ecc71"/>
+            <circle cx="175" cy="180" r="5" fill="#2ecc71"/>
+            <circle cx="175" cy="230" r="5" fill="#2ecc71"/>
+            <circle cx="285" cy="130" r="5" fill="#2ecc71"/>
+            <circle cx="285" cy="180" r="5" fill="#2ecc71"/>
+            <circle cx="285" cy="230" r="5" fill="#f1c40f"/>
+            <path d="M120 120 L150 130" stroke="#ff7f00" stroke-width="4"/>
+            <path d="M120 120 L150 180" stroke="#ff7f00" stroke-width="4"/>
+            <path d="M120 120 L150 230" stroke="#ff7f00" stroke-width="4"/>
+            <path d="M120 120 L260 130" stroke="#00b894" stroke-width="4"/>
+            <path d="M120 120 L260 180" stroke="#00b894" stroke-width="4"/>
+            <path d="M120 120 L260 230" stroke="#0984e3" stroke-width="4"/>
+            <circle cx="250" cy="45" r="20" fill="#f1c40f" opacity="0.3"/>
+            <circle cx="250" cy="45" r="14" fill="#ffeaa7"/>
+            <path d="M240 55 L260 55 L255 70 L245 70 Z" fill="#b2bec3"/>
+            <line x1="250" y1="70" x2="250" y2="95" stroke="#ff7f00" stroke-width="3"/>
+          </svg>
+        </div>
+      </div>
+      <div class="hero-scroll-indicator">
+        <span>Прокрутите вниз</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </section>
 
-        <!-- О нас -->
-        <section class="about" id="about">
-            <div class="container about__container">
-                <div class="about__content">
-                    <span class="section-tag">О компании</span>
-                    <h2>Ложка Вкуса & Tri Limona</h2>
-                    <p class="about__lead">Семейный проект, который родился из любви к домашней кухне.</p>
-                    <p>Мы готовим полуфабрикаты и торты из натуральных продуктов, чтобы вы могли наслаждаться вкусной едой без лишних хлопот. Наши рецепты — это традиции и инновации. Мы используем только свежие ингредиенты и не добавляем усилители вкуса. Каждое блюдо — это маленький праздник для вашего стола.</p>
-                    <div class="about__stats">
-                        <div><span>5+</span> лет опыта</div>
-                        <div><span>50+</span> рецептов</div>
-                        <div><span>1000+</span> довольных клиентов</div>
-                    </div>
-                </div>
-                <div class="about__image">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='400' viewBox='0 0 500 400'%3E%3Crect width='500' height='400' fill='%23f5f0ff' rx='30'/%3E%3Ccircle cx='250' cy='200' r='120' fill='%23ede9fe'/%3E%3Ctext x='180' y='230' font-size='80'%3E🍰%3C/text%3E%3C/svg%3E" alt="О нас" loading="lazy">
-                </div>
+    <!-- ==================== СРОЧНЫЙ ВЫЗОВ ЭЛЕКТРИКА ==================== -->
+    <section class="cta-section">
+      <div class="container cta-container">
+        <div class="cta-content">
+          <i class="fas fa-clock cta-icon"></i>
+          <h2>Срочный вызов электрика в Бишкеке</h2>
+          <p>Выезд в течение 30 минут! Работаем 24/7 без выходных. Аварийное вскрытие щитов, замена проводки, устранение короткого замыкания.</p>
+        </div>
+        <a href="tel:+996552535540" class="btn btn-primary btn-lg cta-btn">
+          <i class="fas fa-phone-alt"></i> Вызвать электрика
+        </a>
+      </div>
+    </section>
+
+    <!-- ==================== КАТЕГОРИИ ==================== -->
+    <section id="categories" class="categories-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Категории товаров и услуг</h2>
+          <p class="section-subtitle">Выберите нужную категорию, чтобы просмотреть все доступные позиции</p>
+        </div>
+        <div class="categories-grid">
+          <div class="category-card" data-category="cables">
+            <div class="category-icon-wrapper">
+              <i class="fas fa-bolt category-icon"></i>
             </div>
-        </section>
-
-        <!-- Отзывы -->
-        <section class="reviews">
-            <div class="container">
-                <h2 class="section-title">Отзывы наших клиентов</h2>
-                <div class="reviews__grid">
-                    <div class="review-card">
-                        <div class="review-stars">★★★★★</div>
-                        <p>«Пельмени — просто объедение! Тесто тонкое, начинка сочная. Доставка быстрая. Спасибо!»</p>
-                        <div class="review-author">— Екатерина</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-stars">★★★★★</div>
-                        <p>«Заказывала Наполеон на день рождения. Нежный, с хрустящими коржами. Все гости были в восторге!»</p>
-                        <div class="review-author">— Алексей</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-stars">★★★★★</div>
-                        <p>«Манты тают во рту. Очень вкусные, как у бабушки. Теперь только здесь беру полуфабрикаты.»</p>
-                        <div class="review-author">— Марина</div>
-                    </div>
-                </div>
+            <h3>Кабельная продукция</h3>
+            <p>Силовые кабели, провода, СИП, гофра, кабель-каналы</p>
+            <span class="category-count">25 товаров</span>
+          </div>
+          <div class="category-card" data-category="pipes">
+            <div class="category-icon-wrapper">
+              <i class="fas fa-grip-lines category-icon"></i>
             </div>
-        </section>
-
-        <!-- Контакты -->
-        <section class="contacts" id="contacts">
-            <div class="container">
-                <div class="contacts__header">
-                    <span class="section-tag">Свяжитесь с нами</span>
-                    <h2 class="section-title">Контакты</h2>
-                </div>
-                <div class="contacts__grid">
-                    <div class="contacts__card">
-                        <div class="contacts__card-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.574 2.81.7A2 2 0 0122 16.92z"/>
-                            </svg>
-                        </div>
-                        <h3>Телефон</h3>
-                        <a href="tel:+996XXXXXXXXX">+996 (XXX) XXX-XX-XX</a>
-                        <p>Пн-Пт: 9:00 - 21:00</p>
-                    </div>
-
-                    <div class="contacts__card contacts__card--whatsapp">
-                        <div class="contacts__card-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
-                            </svg>
-                        </div>
-                        <h3>WhatsApp</h3>
-                        <a href="https://wa.me/996XXXXXXXXX" target="_blank">Написать в WhatsApp</a>
-                        <p>Быстрый ответ в течение 5 минут</p>
-                    </div>
-
-                    <div class="contacts__card contacts__card--instagram">
-                        <div class="contacts__card-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-                            </svg>
-                        </div>
-                        <h3>Instagram</h3>
-                        <a href="#" target="_blank">@lozhkavkusa</a>
-                        <p>Следите за нашими новинками</p>
-                    </div>
-
-                    <div class="contacts__card contacts__card--location">
-                        <div class="contacts__card-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                                <circle cx="12" cy="10" r="3"/>
-                            </svg>
-                        </div>
-                        <h3>Адрес</h3>
-                        <p>г. Бишкек, ул. Ленина, д. 15</p>
-                        <p>Офис: 2 этаж, кабинет 205</p>
-                    </div>
-                </div>
-
-                <div class="contacts__map">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='300' viewBox='0 0 800 300'%3E%3Crect width='800' height='300' fill='%23e0e7ff' rx='20'/%3E%3Cpath d='M250 150 L550 150 L480 220 L320 220 Z' fill='%2390a4f7' opacity='0.5'/%3E%3Ccircle cx='400' cy='150' r='20' fill='%236366f1'/%3E%3Ctext x='370' y='100' font-family='Inter' font-size='18' fill='%233f3f46' font-weight='600'%3Eул. Ленина, 15%3C/text%3E%3Ctext x='355' y='120' font-family='Inter' font-size='14' fill='%236b657a'%3Eг. Бишкек%3C/text%3E%3C/svg%3E" alt="Карта" loading="lazy">
-                </div>
+            <h3>Трубы и кабель-каналы</h3>
+            <p>Гофрированные трубы, ПВХ трубы, металлические лотки</p>
+            <span class="category-count">12 товаров</span>
+          </div>
+          <div class="category-card" data-category="sockets">
+            <div class="category-icon-wrapper">
+              <i class="fas fa-plug category-icon"></i>
             </div>
-        </section>
-    </main>
+            <h3>Розетки и выключатели</h3>
+            <p>Розетки, выключатели, диммеры, USB-розетки, рамки</p>
+            <span class="category-count">30 товаров</span>
+          </div>
+          <div class="category-card" data-category="panels">
+            <div class="category-icon-wrapper">
+              <i class="fas fa-server category-icon"></i>
+            </div>
+            <h3>Щиты и оборудование</h3>
+            <p>Электрощиты, автоматы, УЗО, дифавтоматы, DIN-рейки</p>
+            <span class="category-count">18 товаров</span>
+          </div>
+          <div class="category-card" data-category="lighting">
+            <div class="category-icon-wrapper">
+              <i class="fas fa-lightbulb category-icon"></i>
+            </div>
+            <h3>Освещение</h3>
+            <p>LED лампы, прожекторы, светильники, люстры, трековые системы</p>
+            <span class="category-count">22 товара</span>
+          </div>
+          <div class="category-card" data-category="services">
+            <div class="category-icon-wrapper">
+              <i class="fas fa-tools category-icon"></i>
+            </div>
+            <h3>Услуги электрика</h3>
+            <p>Монтаж, демонтаж, диагностика, штробление, проектирование</p>
+            <span class="category-count">15 услуг</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Корзина (модальное окно) -->
-    <div class="cart-modal" id="cartModal">
-        <div class="cart-modal__content">
-            <button class="cart-modal__close" id="cartModalClose">&times;</button>
-            <h2>🛒 Корзина</h2>
-            <div id="cartItems" class="cart-items"></div>
-            <div class="cart-total">
-                <span>Итого:</span>
-                <span><strong id="cartTotalPrice">0 сом</strong></span>
+    <!-- ==================== КАТАЛОГ ТОВАРОВ ==================== -->
+    <section id="catalog" class="catalog-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Каталог товаров и услуг</h2>
+          <p class="section-subtitle">Более 120 позиций электротоваров и электромонтажных услуг</p>
+        </div>
+
+        <div class="category-filter" id="categoryFilter">
+          <button class="filter-btn active" data-category="all"><i class="fas fa-th-large"></i> Все товары</button>
+          <button class="filter-btn" data-category="cables"><i class="fas fa-bolt"></i> Кабели</button>
+          <button class="filter-btn" data-category="pipes"><i class="fas fa-grip-lines"></i> Трубы</button>
+          <button class="filter-btn" data-category="sockets"><i class="fas fa-plug"></i> Розетки</button>
+          <button class="filter-btn" data-category="panels"><i class="fas fa-server"></i> Щиты</button>
+          <button class="filter-btn" data-category="lighting"><i class="fas fa-lightbulb"></i> Освещение</button>
+          <button class="filter-btn" data-category="services"><i class="fas fa-tools"></i> Услуги</button>
+        </div>
+
+        <div class="sort-bar">
+          <span>Сортировать:</span>
+          <button class="sort-btn active" data-sort="default">По умолчанию</button>
+          <button class="sort-btn" data-sort="price-asc">Цена ↑</button>
+          <button class="sort-btn" data-sort="price-desc">Цена ↓</button>
+          <button class="sort-btn" data-sort="name">По названию</button>
+        </div>
+
+        <div class="catalog-grid" id="catalogGrid"></div>
+
+        <div class="pagination" id="pagination"></div>
+      </div>
+    </section>
+
+    <!-- ==================== ПРЕИМУЩЕСТВА ==================== -->
+    <section id="advantages" class="advantages-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Почему выбирают NURSERVICE</h2>
+          <p class="section-subtitle">Мы обеспечиваем высочайший уровень сервиса и качества</p>
+        </div>
+        <div class="advantages-grid">
+          <div class="advantage-card">
+            <div class="advantage-icon"><i class="fas fa-medal"></i></div>
+            <h3>Качественные материалы</h3>
+            <p>Работаем только с сертифицированной продукцией от ведущих мировых производителей: ABB, Schneider Electric, Legrand, IEK.</p>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon"><i class="fas fa-tachometer-alt"></i></div>
+            <h3>Быстрое выполнение</h3>
+            <p>Среднее время выполнения заказа — 1-2 дня. Срочные заявки обрабатываем в течение 2 часов.</p>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon"><i class="fas fa-user-tie"></i></div>
+            <h3>Опытные специалисты</h3>
+            <p>В нашей команде только квалифицированные электрики с опытом от 5 лет.</p>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>Гарантия до 2 лет</h3>
+            <p>Предоставляем расширенную гарантию на все виды работ и материалов.</p>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon"><i class="fas fa-tags"></i></div>
+            <h3>Прозрачные цены</h3>
+            <p>Фиксированная стоимость работ без скрытых платежей. Детальная смета перед началом.</p>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon"><i class="fas fa-cogs"></i></div>
+            <h3>Современное оборудование</h3>
+            <p>Используем профессиональный инструмент Hilti, Bosch, Makita.</p>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon"><i class="fas fa-clock"></i></div>
+            <h3>Работаем 24/7</h3>
+            <p>Принимаем заявки круглосуточно. Аварийный выезд в любое время.</p>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon"><i class="fas fa-file-contract"></i></div>
+            <h3>Работа по договору</h3>
+            <p>Заключаем официальный договор. Предоставляем все закрывающие документы.</p>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <h3>Работаем по всему Бишкеку</h3>
+            <p>Выполняем заказы в Бишкеке.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== О НАС ==================== -->
+    <section id="about" class="about-section section-padding">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text">
+            <h2 class="section-title" style="text-align: left;">О компании NURSERVICE</h2>
+            <p class="about-intro"><strong>NURSERVICE</strong> — это профессиональная электромонтажная компания с 10-летним опытом работы на рынке Кыргызстана.</p>
+            <p>За годы работы мы выполнили более <strong>1250 проектов</strong> различной сложности: от замены розетки в квартире до полной электрификации крупных коммерческих объектов.</p>
+            <p>Мы тщательно отбираем материалы для продажи и монтажа, сотрудничая только с проверенными поставщиками.</p>
+            <div class="about-features">
+              <div class="about-feature">
+                <i class="fas fa-check-circle"></i>
+                <div>
+                  <strong>Лицензированные специалисты</strong>
+                  <p>Все электрики имеют допуски и аттестацию</p>
+                </div>
+              </div>
+              <div class="about-feature">
+                <i class="fas fa-check-circle"></i>
+                <div>
+                  <strong>Собственный склад</strong>
+                  <p>Более 5000 позиций электротоваров в наличии</p>
+                </div>
+              </div>
+              <div class="about-feature">
+                <i class="fas fa-check-circle"></i>
+                <div>
+                  <strong>Бесплатный выезд</strong>
+                  <p>Бесплатно выезжаем на оценку объекта</p>
+                </div>
+              </div>
+              <div class="about-feature">
+                <i class="fas fa-check-circle"></i>
+                <div>
+                  <strong>Проектирование</strong>
+                  <p>Разрабатываем проекты электроснабжения</p>
+                </div>
+              </div>
             </div>
-            <div class="cart-total-items">
-                Товаров: <strong id="cartTotalItems">0</strong>
+          </div>
+          <div class="about-image-wrapper">
+            <div class="about-image-main">
+              <svg viewBox="0 0 400 350" xmlns="http://www.w3.org/2000/svg" class="about-svg">
+                <rect x="30" y="30" width="340" height="290" rx="16" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2"/>
+                <rect x="60" y="60" width="120" height="90" rx="8" fill="#ff7f00" opacity="0.15"/>
+                <rect x="220" y="60" width="120" height="90" rx="8" fill="#ff7f00" opacity="0.15"/>
+                <rect x="60" y="170" width="280" height="60" rx="8" fill="#2d3436" opacity="0.1"/>
+                <circle cx="120" cy="105" r="20" fill="#ff7f00" opacity="0.5"/>
+                <circle cx="280" cy="105" r="20" fill="#ff7f00" opacity="0.5"/>
+                <rect x="140" y="185" width="100" height="30" rx="4" fill="#ff7f00"/>
+                <line x1="120" y1="40" x2="120" y2="15" stroke="#ff7f00" stroke-width="3"/>
+                <line x1="280" y1="40" x2="280" y2="15" stroke="#ff7f00" stroke-width="3"/>
+                <text x="200" y="260" text-anchor="middle" fill="#ff7f00" font-weight="bold" font-size="18">NURSERVICE</text>
+              </svg>
             </div>
-            <button class="btn btn-primary checkout-btn" id="checkoutBtn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
-                </svg>
-                Оформить заказ через WhatsApp
+            <div class="about-experience-badge">
+              <span class="badge-number">10</span>
+              <span class="badge-text">лет<br>опыта</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <section id="faq" class="faq-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Часто задаваемые вопросы</h2>
+          <p class="section-subtitle">Ответы на самые популярные вопросы наших клиентов</p>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Сколько стоит вызов электрика на дом?</span>
+              <i class="fas fa-chevron-down"></i>
             </button>
-        </div>
-    </div>
-
-    <!-- Toast уведомление -->
-    <div class="toast" id="toast">
-        <div class="toast__icon">✅</div>
-        <div class="toast__content">
-            <div class="toast__title">Товар добавлен!</div>
-            <div class="toast__message" id="toastMessage">Пельмени</div>
-        </div>
-        <button class="toast__close" id="toastClose">&times;</button>
-    </div>
-
-    <!-- Футер -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__top">
-                <div class="footer__brand">
-                    <div class="footer__logo">
-                        <span class="logo-icon">🥄</span>
-                        <span>Ложка Вкуса & Tri Limona</span>
-                    </div>
-                    <p>Домашние полуфабрикаты и торты с любовью</p>
-                    <div class="footer__social">
-                        <a href="#" aria-label="Instagram" class="social-link">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-                            </svg>
-                        </a>
-                        <a href="#" aria-label="WhatsApp" class="social-link">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
-                            </svg>
-                        </a>
-                        <a href="#" aria-label="Telegram" class="social-link">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 2L11 13"/>
-                                <path d="M22 2L15 22l-4-9-9-4 20-7z"/>
-                            </svg>
-                        </a>
-                        <a href="#" aria-label="YouTube" class="social-link">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"/>
-                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer__links">
-                    <div class="footer__links-column">
-                        <h4>Навигация</h4>
-                        <ul>
-                            <li><a href="#catalog">Каталог</a></li>
-                            <li><a href="#about">О нас</a></li>
-                            <li><a href="#contacts">Контакты</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer__links-column">
-                        <h4>Категории</h4>
-                        <ul>
-                            <li><a href="#" data-category="polufabrikaty">Полуфабрикаты</a></li>
-                            <li><a href="#" data-category="torty">Торты</a></li>
-                            <li><a href="#" data-category="all">Все товары</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer__links-column">
-                        <h4>Контакты</h4>
-                        <ul>
-                            <li><a href="tel:+996XXXXXXXXX">+996 (XXX) XXX-XX-XX</a></li>
-                            <li><a href="https://wa.me/996XXXXXXXXX" target="_blank">WhatsApp</a></li>
-                            <li><a href="mailto:info@lozhkavkusa.com">info@lozhkavkusa.com</a></li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="faq-answer">
+              <p>Выезд специалиста в пределах Бишкека — <strong>бесплатный</strong> при заказе работ. Диагностика и консультация также бесплатны. Стоимость работ рассчитывается индивидуально после осмотра объекта.</p>
             </div>
-            <div class="footer__bottom">
-                <div class="footer__copy">
-                    &copy; 2026 Ложка Вкуса & Tri Limona. Все права защищены.
-                </div>
-                <div class="footer__badge">
-                    <span>❤️ Сделано с любовью</span>
-                </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Какие гарантии вы предоставляете?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Мы предоставляем <strong>гарантию до 5 лет</strong> на все виды электромонтажных работ. В случае возникновения проблем в гарантийный период мы бесплатно выезжаем и устраняем неисправности.</p>
             </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Работаете ли вы в выходные и праздники?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Да, мы работаем <strong>24/7 без выходных и праздников</strong>. Аварийные вызовы принимаем круглосуточно.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Можно ли купить материалы без заказа монтажа?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Конечно! У нас собственный склад электротоваров, и вы можете приобрести любые материалы без заказа монтажных работ.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Делаете ли вы проекты электроснабжения?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Да, мы разрабатываем проекты электроснабжения любой сложности: для квартир, частных домов, офисов, коммерческих и промышленных объектов.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Как быстро вы можете приехать на аварийный вызов?</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Среднее время прибытия на аварийный вызов в Бишкеке составляет <strong>30-40 минут</strong>.</p>
+            </div>
+          </div>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- ==================== КОНТАКТЫ ==================== -->
+    <section id="contacts" class="contacts-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Наши контакты</h2>
+          <p class="section-subtitle">Свяжитесь с нами любым удобным способом</p>
+        </div>
+        <div class="contacts-grid">
+          <div class="contact-card">
+            <div class="contact-icon-wrapper"><i class="fas fa-phone-alt"></i></div>
+            <h3>Телефон</h3>
+            <a href="tel:+996552535540" class="contact-link">+996 552 535 540</a>
+            <p>звонить по номеру</p>
+            <button class="btn btn-primary" onclick="window.location.href='tel:+996555123456'">
+              <i class="fas fa-phone"></i> Позвонить
+            </button>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon-wrapper"><i class="fab fa-whatsapp"></i></div>
+            <h3>WhatsApp</h3>
+            <a href="https://wa.me/996552535540" target="_blank" class="contact-link">+996 552 535 540</a>
+            <p>Отвечаем в течение 5 минут</p>
+            <a href="https://wa.me/996552535540" target="_blank" class="btn btn-primary">
+              <i class="fab fa-whatsapp"></i> Написать
+            </a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon-wrapper"><i class="fas fa-envelope"></i></div>
+            <h3>Email</h3>
+            <a href="nuradil.zholdoshev@yandex.ru" class="contact-link">nuradil.zholdoshev@yandex.ru</a>
+            <p>Отвечаем в течение 5 минут</p>
+
+            <a href="mailto:info@nurservice.kg" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i> Отправить
+            </a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon-wrapper"><i class="fas fa-map-marker-alt"></i></div>
+            <h3>Адрес</h3>
+            <p>г. Бишкек, ул. Жибек Жолу, 479</p>
+            <p>Ориентир: Парк Панфилова</p>
+            <a href="#" class="btn btn-primary">
+              <i class="fas fa-map-marked-alt"></i> На карте
+            </a>
+          </div>
+        </div>
+        <div class="contacts-working-hours">
+          <div class="working-hours-card">
+            <i class="far fa-clock"></i>
+            <div>
+              <strong>Режим работы</strong>
+              <p>круглосуточно</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== ПОДВАЛ ==================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand-col">
+          <a href="#" class="logo footer-logo">
+            <span class="logo-icon"><i class="fas fa-bolt"></i></span>
+            <span class="logo-text">NUR<span class="logo-highlight">SERVICE</span></span>
+          </a>
+          <p>Профессиональные электромонтажные работы и качественные электротовары с гарантией.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Категории</h4>
+          <ul>
+            <li><a href="#catalog">Кабельная продукция</a></li>
+            <li><a href="#catalog">Трубы и кабель-каналы</a></li>
+            <li><a href="#catalog">Розетки и выключатели</a></li>
+            <li><a href="#catalog">Щиты и оборудование</a></li>
+            <li><a href="#catalog">Освещение</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Услуги</h4>
+          <ul>
+            <li><a href="#catalog">Электромонтаж</a></li>
+            <li><a href="#catalog">Проектирование</a></li>
+            <li><a href="#catalog">Диагностика</a></li>
+            <li><a href="#catalog">Аварийный вызов</a></li>
+            <li><a href="#catalog">Консультация</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Контакты</h4>
+          <ul class="footer-contacts">
+            <li><i class="fas fa-phone-alt"></i> <a href="tel:+996 552 535 540">+996 552 535 540</a></li>
+            <li><i class="fas fa-phone-alt"></i> <a href="tel:+996 552 535 540">+996 552 535 540</a></li>
+            <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/996 552 535 540">WhatsApp</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="nuradil.zholdoshev@yandex.ru">nuradil.zholdoshev@yandex.ru</a></li>
+            <li><i class="fas fa-map-marker-alt"></i> г. Бишкек, ул. Жибек Жолу, 479</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 NURSERVICE. Все права защищены.</p>
+        <p>Разработано с <i class="fas fa-heart" style="color: #ff7f00;"></i> для вашего комфорта</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== МОДАЛЬНОЕ ОКНО КОРЗИНЫ ==================== -->
+  <div class="cart-modal-overlay" id="cartModalOverlay">
+    <div class="cart-modal" id="cartModal">
+      <div class="cart-modal-header">
+        <h3><i class="fas fa-shopping-cart"></i> Ваша корзина</h3>
+        <button class="close-cart-btn" id="closeCartBtn" aria-label="Закрыть корзину">&times;</button>
+      </div>
+      <div class="cart-modal-body" id="cartItemsContainer"></div>
+      <div class="cart-modal-footer" id="cartFooter" style="display: none;">
+        <div class="cart-total">
+          <span>Итого:</span>
+          <span class="cart-total-price" id="cartTotalPrice">0 сом</span>
+        </div>
+        <div class="cart-actions">
+          <button class="btn btn-secondary" id="clearCartBtn"><i class="fas fa-trash-alt"></i> Очистить</button>
+          <button class="btn btn-primary" id="checkoutBtn"><i class="fab fa-whatsapp"></i> Оформить заказ</button>
+        </div>
+      </div>
+      <div class="cart-empty" id="cartEmpty">
+        <i class="fas fa-shopping-basket"></i>
+        <p>Корзина пуста</p>
+        <span>Добавьте товары из каталога</span>
+      </div>
+    </div>
+  </div>
+
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Наверх">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
 </body>
 </html>
